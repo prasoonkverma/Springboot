@@ -12,10 +12,10 @@ import com.example.java.model.User;
 @Service
 public class AggregatorService {
 	
-	@Value("${user.service.endpoint}")
+	@Value("${USERSERVICE_URL}")
 	String userServiceEndpoint;
 	
-	@Value("${order.service.endpoint}")
+	@Value("${ORDERSERVICE_URL}")
 	String orderServiceEndpoint;
 	
 	@Autowired
