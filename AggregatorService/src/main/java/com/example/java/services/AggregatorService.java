@@ -25,12 +25,12 @@ public class AggregatorService {
 	
 	public OrderDetails getOrderDetails(Integer id) {
 
-		String userServiceUri = userServiceEndpoint + "/" + id;
+		String userServiceUri = userServiceEndpoint + "/users/" + id;
 		System.out.println("CALLING API: UserService : " + userServiceUri);
 	    User user = restTemplate.getForObject(userServiceUri, User.class);
 	    System.out.println("Response from UserService : " + user);
 	    
-	    String orderServiceUri = orderServiceEndpoint + "/" + id;
+	    String orderServiceUri = orderServiceEndpoint + "/orders/" + id;
 	    System.out.println("CALLING API: OrderService : " + orderServiceUri);
 	    OrdersResponse orderResponse = restTemplate.getForObject(orderServiceUri, OrdersResponse.class);
 	    System.out.println("Response from OrderService : " + orderResponse);
